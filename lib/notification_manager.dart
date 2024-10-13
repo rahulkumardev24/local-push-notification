@@ -32,7 +32,7 @@ class NotificationHelper {
 
   void notifyMessage({required String title, required String body}) {
 
-    NotificationDetails notificationDetails = NotificationDetails(
+    NotificationDetails notificationDetails = const NotificationDetails(
       android: AndroidNotificationDetails("Test", "Test Channel", importance: Importance.high),
       iOS: DarwinNotificationDetails(),
     );

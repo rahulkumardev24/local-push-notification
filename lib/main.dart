@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'notification_manager.dart';
 
 void main() {
@@ -19,14 +18,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -48,11 +46,11 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home Page'),
       ),
       body: Center(
-        child: ElevatedButton(onPressed: (){
-
-          helper.notifyMessage(title: "New Message", body: "From Rahul ");
-
-        }, child: const Text("Push Notification")),
+        child: ElevatedButton(
+            onPressed: () {
+              helper.notifyMessage(title: "New Message", body: "From Rahul");
+            },
+            child: const Text("Push Notification")),
       ),
     );
   }
